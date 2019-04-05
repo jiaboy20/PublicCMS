@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>南京引聚力科技有限公司</title>
+<link href="//localhost:8080/publiccms/webfile/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="//localhost:8080/publiccms/webfile/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="//localhost:8080/publiccms/webfile/css/flexslider.css" type="text/css" media="screen" />
+<script src="//localhost:8080/publiccms/webfile/js/jquery.min.js"></script>	 
+</head>
+<body>
+<!-- header -->
+<div class="banner1">
+	<div class="container">
+		<!-- header -->
+<div class="logo">
+	<a href="//localhost:8080/publiccms/webfile/index.html"><img src="//localhost:8080/publiccms/webfile/upload/2019/03-25/00-18-240095-54330798.png" alt="南京引聚力科技有限公司" /></a>
+</div>
+<div class="head-nav">
+	<span class="menu"> </span>
+	<ul>
+		<li><a href="//localhost:8080/publiccms/index.html">首页</a></li>
+		<li><a href="//localhost:8080/publiccms/about.html?id=1">公司简介</a></li>
+		<li><a href="//localhost:8080/publiccms/services.html?id=2">服务范围</a></li>
+		<li><a href="//localhost:8080/publiccms/cases.html?id=3">成功案例</a></li>
+		<li><a href="//localhost:8080/publiccms/contcat.html?id=4">联系我们</a></li>
+		<div class="clearfix"> </div>
+	</ul>
+</div>
+<!-- script-for-nav -->
+<script>
+	$( "span.menu" ).click(function() {
+		$( ".head-nav ul" ).slideToggle(300, function() {
+			// Animation complete.
+		});
+	});
+</script>
+<!-- script-for-nav -->	
+<!-- header --> 
+		<!-- script-for-nav -->
+		<script>
+			$( ".head-nav ul li:eq(1)" ).addClass("active")
+		</script>
+		<!-- script-for-nav -->		
+		<div class="clearfix"> </div>	
+		<h1>about</h1>	
+	</div>
+</div>
+<!-- header -->
+	2
+<!-- about-section -->
+	<div class="about-section">
+		<div class="container">
+			<div class="col-md-8 about-left1" style="width:100%">
+				<h3>事业内容</h3>
+				<div class="left">
+					 ${content.text?no_esc}  
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- about-section -->
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="col-md-4">
+			<p>Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="#">www.freemoban.com</a></p>
+		</div>
+		<div class="col-md-4 policy">
+			<ul>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">FAQs</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4 social">
+			<ul>
+				<li><a href="#"><i class="fb"></i></a></li>
+				<li><a href="#"><i class="twt"></i></a></li>
+				<li><a href="#"><i class="goog"></i></a></li>
+				<li><a href="#"><i class="in"></i></a></i></li>
+				<li><a href="#"><i class="pp"></i></a></i></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- footer --> 
+</body>
+</html>

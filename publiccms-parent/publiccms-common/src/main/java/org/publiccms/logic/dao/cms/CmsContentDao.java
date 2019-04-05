@@ -212,12 +212,17 @@ public class CmsContentDao extends BaseDao<CmsContent> {
         case "default":
             orderType = ORDERTYPE_DESC;
         default:
-            if (ORDERTYPE_DESC.equals(orderType)) {
-                queryHandler.order("bean.sort desc");
+            if (orderField != BLANK) {
+                queryHandler.order("bean."+ orderField + " " + orderType);
+            } else {
+//                if (ORDERTYPE_DESC.equals(orderType)) {
+//                    queryHandler.order("bean.sort ");
+//                }
+                queryHandler.order("bean.sort " + orderType);
+                queryHandler.order("bean.publishDate " + orderType);
             }
-            queryHandler.order("bean.publishDate desc");
         }
-        queryHandler.order("bean.id desc");
+        queryHandler.order("bean.id " + orderType);
         return getPage(queryHandler, pageIndex, pageSize);
     }
 

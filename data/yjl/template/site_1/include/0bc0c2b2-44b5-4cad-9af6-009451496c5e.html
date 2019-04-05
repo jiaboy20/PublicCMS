@@ -1,0 +1,26 @@
+<!-- header -->
+<div class="logo">
+	<font color="#ffa200"><h2><@_sysConfigData code="site">${object.company_name}</@_sysConfigData></h2></font>
+</div>
+<div class="head-nav">
+	<span class="menu"> </span>
+	<ul>
+		<li><a href="${site.dynamicPath}index.html">首页</a></li>
+		<@_categoryList parentId=parentId typeId=typeId allowContribute=allowContribute pageIndex=pageIndex count=count>
+		<#list page.list as a>
+		<li><a href="${a.url}">${a.name}</a></li>
+		</#list>
+		</@_categoryList>
+		<div class="clearfix"> </div>
+	</ul>
+</div>
+<!-- script-for-nav -->
+<script>
+	$( "span.menu" ).click(function() {
+		$( ".head-nav ul" ).slideToggle(300, function() {
+			// Animation complete.
+		});
+	});
+</script>
+<!-- script-for-nav -->	
+<!-- header -->

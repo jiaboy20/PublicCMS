@@ -1,0 +1,1 @@
+{"article":{"id":"article","parentId":"","name":"文章","templatePath":"/content.html","hasChild":false,"onlyUrl":false,"hasImages":false,"hasFiles":false,"extendList":[{"id":{"code":"image"},"required":false,"maxlength":null,"sort":0,"name":"封面图","description":"","inputType":"image","defaultValue":"","dictionaryId":""}]}}

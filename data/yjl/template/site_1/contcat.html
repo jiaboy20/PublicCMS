@@ -1,0 +1,39 @@
+<@_category id=id>
+	<#assign category=object/>
+	<#assign attribute=getCategoryAttribute(id)/>
+</@_category>
+<!DOCTYPE HTML>
+<html>
+<head>
+<@_includePlace path="/efa26037-f2d7-4885-b2e6-c9f53fbfe29e.html"/> <#-- header meta -->
+</head>
+<body>
+<!-- header -->
+<div class="banner1">
+	<div class="container">
+		<@_includePlace path="/0bc0c2b2-44b5-4cad-9af6-009451496c5e.html"/> <#-- header -->
+		<!-- script-for-nav -->
+		<script>
+			$( ".head-nav ul li:eq(${category.sort})" ).addClass("active")
+		</script>
+		<!-- script-for-nav -->		
+		<div class="clearfix"> </div>	
+		<h1>${category.code}</h1>	
+	</div>
+</div>
+<!-- header -->
+<!---- contact ----->
+<div class="contact">
+
+	<div class="container">
+
+		<div class="contact-grids">
+				${attribute.article?no_esc}
+				<div class="clearfix"> </div>
+			</div>
+	</div>
+</div>
+<!---- contact ----->
+<@_includePlace path="/169c77f8-ac6b-4259-8ab7-7dc0a2b1bf85.html"/> <#-- footer -->
+</body>
+</html>

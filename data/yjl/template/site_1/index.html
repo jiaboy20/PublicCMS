@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<@_includePlace path="/efa26037-f2d7-4885-b2e6-c9f53fbfe29e.html"/> <#-- header meta -->
+</head>
+<body>
+<!-- header -->
+<div class="banner">
+	<div class="container">
+		<@_includePlace path="/0bc0c2b2-44b5-4cad-9af6-009451496c5e.html"/> <#-- header -->
+		<!-- script-for-nav -->
+		<script>
+			$( ".head-nav ul li:eq(0)" ).addClass("active")
+		</script>
+		<!-- script-for-nav -->	
+		<div class="clearfix"> </div>
+		<@_includePlace path="/9d4c3f0b-4b99-477e-ae13-5e1af2228d9e.html"/> <#-- homepage scroll  -->
+	</div>
+</div>
+<!-- header -->
+<!-- services -->
+<@_contentList categoryId=metadata.extendData.category1 containChild=true count=3>
+	<#if page.totalCount gt 0>
+	<div class="ourservices" >
+		<div class="container" >
+			<h2 style="margin: 0em 0em 1em">解决方案</h2>
+			<#list page.list as a>
+			<#-- 内容扩展数据(参数为内容Id) -->
+			<#assign attribute=getContentAttribute(a.id)/>
+			<div class="col-md-4">
+				<a href="${a.url}"><img src="${site.sitePath+attribute.image}" alt="${a.title}" style="width:300px; height:210px"/></a>
+				<a href="${a.url}"><h4>${a.title}</h4></a>
+				<a href="${a.url}"><p align="left">${a.description?no_esc}</p></a>
+			</div>
+			</#list>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</#if>
+</@_contentList>
+<!-- services -->
+<!-- case-studies -->
+<@_contentList categoryId=metadata.extendData.category2 containChild=true count=4>
+	<#if page.totalCount gt 0>
+	<div class="case-studies">
+		<div class="container" >
+			<h2>成功案例</h2>
+			<div class="studies">
+				<div class="wmuSlider example1 section" id="section-1">
+				<#list page.list as a>
+					<article style="position: absolute; width: 100%; opacity: 0;"> 
+					   <div class="data">
+						   <h4>${a.title}</h4>
+						   <p align="left">${a.description?no_esc}</p> 
+						   <a class="read-more" href="${a.url}">read more</a>
+					   </div>
+					   <div class="man">
+						   <img src="${site.sitePath+a.cover}" alt="${a.title}" class="img-responsive" style="height:280px; width:400px"/>
+					   </div>
+					   <div class="clearfix"></div>
+					</article>
+				</#list>
+				<ul class="wmuSliderPagination">
+                	<li><a href="#" class="">0</a></li>
+                	<li><a href="#" class="">1</a></li>
+                	<li><a href="#" class="">2</a></li>
+                </ul>
+				</div>
+			</div>
+			<!-- script -->
+			<script src="${site.sitePath}js/jquery.wmuSlider.js"></script> 
+			<script>
+				$('.example1').wmuSlider();         
+			</script>
+			<!-- script -->	
+		</div>
+	</div>
+	</#if>
+</@_contentList>
+<!-- case-studies -->
+<@_includePlace path="/169c77f8-ac6b-4259-8ab7-7dc0a2b1bf85.html"/> <#-- footer -->
+</body>
+</html>
